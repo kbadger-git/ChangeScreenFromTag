@@ -1,0 +1,62 @@
+Name: Screens
+Id: g=f19534d94ec2a47ccc8ea9386a48ac83
+Type: FolderType
+Children:
+- Name: MyBaseScreen4
+  Id: g=82a7d45a17018ff36be113c5fa731bc9
+  Supertype: MyBaseScreen
+  ReferenceType: HasComponent
+  Children:
+  - Name: ScreenId
+    Id: g=89e43f662d21d0b11886bcce655472ad
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: Label1
+    Id: g=bfea64569c795e7d4c9d9c0c63a57f81
+    Type: Label
+  - Name: Label2
+    Id: g=9887115eb2bc7e92cab27d39380072ab
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=d4ec205a9c17333952aa3ac0180c2050
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Id: g=a31c5af3bf16d66a61ab064d0b3e73df
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../ScreenId"
+- File: SomeScreens/SomeScreens.yaml
+- File: MoreScreens/MoreScreens.yaml
+- Name: MyBaseScreen3
+  Id: g=16876b02cda77b5afbb94ff2cc14b1b5
+  Supertype: MyBaseScreen
+  ReferenceType: HasComponent
+  Children:
+  - Name: ScreenId
+    Id: g=a4ec6109019183b292d330bce3c7d621
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 3
+  - Name: Label1
+    Id: g=9108070f007caad4253a1ebb55fca145
+    Type: Label
+  - Name: Label2
+    Id: g=380a3c28ee41080b545df458b5efac37
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=ee27f51eeffb6ff2bab4018d9e70fcf4
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Id: g=ee9a64a32294c32f6d5686897e96ef6e
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../ScreenId"

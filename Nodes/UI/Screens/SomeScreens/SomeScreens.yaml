@@ -1,0 +1,32 @@
+Name: SomeScreens
+Id: g=f0c83ea9abfd5a5ee38e5e365671a362
+Type: FolderType
+Children:
+- Name: MyBaseScreen1
+  Id: g=38784cac453845506098dd080b5b233f
+  Supertype: MyBaseScreen
+  ReferenceType: HasComponent
+  Children:
+  - Name: ScreenId
+    Id: g=d82ed55be4aba05a05e3652c94c06c46
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 1
+  - Name: Label1
+    Id: g=1f7daa0a5f5c84cbb6a025db0b448cc2
+    Type: Label
+  - Name: Label2
+    Id: g=1b408d9484d0ed8c1584759f4d768828
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=7a274b9bc6d08e186e2166a83c3ebdab
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Id: g=e19e9f0e71032ae8b82f4b39d554594e
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../ScreenId"

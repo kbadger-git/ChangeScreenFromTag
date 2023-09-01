@@ -1,0 +1,63 @@
+Name: Types
+Id: g=3e1a410979f53a6e9a50758675c08c1e
+Type: FolderType
+Children:
+- Name: MyBaseScreen
+  Id: g=d85e63d992bc53f9fb3c50e4c38700d9
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=d48d8965973e7503c55350cddb877666
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Height
+    Id: g=3c9548824edb3efe9f345e4d16f728cb
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: ScreenId
+    Id: g=d29b7b309bf468116b7bfcb967ab8997
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: Label1
+    Id: g=252456b0c91ea29d36a29f5611abe86f
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=539d344987a41f8d10184554f5a1e9f7
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"This screen has ID:"}
+  - Name: Label2
+    Id: g=8c9314a5a5c01e19c1fa44d90e9763c0
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=466c8e844c6ee67f99f2e41d62cb54d9
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Id: g=4946913ef024ad06b22b5deee497dd6e
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../ScreenId"
+    - Name: LeftMargin
+      Id: g=f10bc7a0922c8fa398f755cf24d54c20
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 110.0
+    - Name: TopMargin
+      Id: g=3a9eba0fa8065fe59110d8daf642f3e2
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 0.0
