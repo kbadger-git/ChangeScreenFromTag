@@ -12,6 +12,9 @@ using FTOptix.NetLogic;
 using FTOptix.OPCUAServer;
 using System.Collections.Generic;
 using System.Reflection.Metadata;
+using FTOptix.System;
+using FTOptix.EventLogger;
+using FTOptix.Store;
 #endregion
 
 public class ChangePageFromTag : BaseNetLogic {
@@ -31,6 +34,10 @@ public class ChangePageFromTag : BaseNetLogic {
         pagesDictionary.Clear();
         panelLoader = InformationModel.Get<PanelLoader>(LogicObject.GetVariable("PanelLoader").Value);
         pageChangeTag = InformationModel.GetVariable(LogicObject.GetVariable("PageChangeTag").Value);
+        //Code below allows this to work without needing to reference the pageChangeTag with a button/label in order for it to monitor tag value changes.
+        var variableSynchronizer = new RemoteVariableSynchronizer();
+        variableSynchronizer.Add(pageChangeTag);
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         NodeId screensFolder = LogicObject.GetVariable("ScreensFolder").Value;
         String basePageTypeName = InformationModel.Get(LogicObject.GetVariable("BasePageType").Value).BrowseName;
         RecursiveSearch(InformationModel.Get(screensFolder), basePageTypeName);
